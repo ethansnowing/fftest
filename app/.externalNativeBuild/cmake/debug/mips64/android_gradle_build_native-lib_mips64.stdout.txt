@@ -1,0 +1,5 @@
+[1/1] Re-running CMake...
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/yudehuai/Desktop/fftest/app/.externalNativeBuild/cmake/debug/mips64
+FAILED: /Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake -H/Users/yudehuai/Desktop/fftest/app/src/main/cpp -B/Users/yudehuai/Desktop/fftest/app/.externalNativeBuild/cmake/debug/mips64

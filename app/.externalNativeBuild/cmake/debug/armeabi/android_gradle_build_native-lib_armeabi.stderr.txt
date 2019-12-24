@@ -1,0 +1,1 @@
+ninja: error: '/Users/yudehuai/Desktop/fftest/app/src/main/cpp/armeabi-v7a/libavcodec.a', needed by '/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi/libnative-lib.so', missing and no known rule to make it

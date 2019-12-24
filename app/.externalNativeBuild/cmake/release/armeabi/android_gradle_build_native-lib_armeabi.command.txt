@@ -1,0 +1,8 @@
+Executable : /Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
+arguments : 
+--build
+/Users/yudehuai/Desktop/fftest/app/.externalNativeBuild/cmake/release/armeabi
+--target
+native-lib
+jvmArgs : 
+

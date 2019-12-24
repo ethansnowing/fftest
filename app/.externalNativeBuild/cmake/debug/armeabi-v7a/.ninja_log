@@ -1,0 +1,13 @@
+# ninja log v5
+407	500	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb
+1	407	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+1	378	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+379	466	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb
+0	351	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+351	428	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb
+1	206	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+206	247	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb
+1	384	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+384	468	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb
+0	204	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	56e2fb235a158301
+204	244	0	/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	7e65f8d581d176eb

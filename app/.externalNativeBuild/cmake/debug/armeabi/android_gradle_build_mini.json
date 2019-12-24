@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "/Users/yudehuai/Desktop/fftest/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/app/.externalNativeBuild/cmake/debug/armeabi --target clean"
+  ],
+  "libraries": {
+    "avcodec-Debug-armeabi": {
+      "artifactName": "avcodec",
+      "abi": "armeabi",
+      "output": "/Users/yudehuai/Desktop/fftest/app/src/main/cpp/armeabi-v7a/libavcodec.a"
+    },
+    "native-lib-Debug-armeabi": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/app/.externalNativeBuild/cmake/debug/armeabi --target native-lib",
+      "abi": "armeabi",
+      "output": "/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/debug/obj/armeabi/libnative-lib.so"
+    }
+  }
+}
