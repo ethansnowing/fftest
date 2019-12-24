@@ -49,6 +49,22 @@
 			],
 			"output" : "/Users/yudehuai/Desktop/fftest/app/build/intermediates/cmake/release/obj/armeabi-v7a/libnative-lib.so",
 			"toolchain" : "17826001263893922363"
+		},
+		"swresample-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "swresample",
+			"buildType" : "release",
+			"output" : "/Users/yudehuai/Desktop/fftest/app/src/main/cpp/libs/armeabi-v7a/libswresample.so",
+			"toolchain" : "17826001263893922363"
+		},
+		"swscale-Release-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "swscale",
+			"buildType" : "release",
+			"output" : "/Users/yudehuai/Desktop/fftest/app/src/main/cpp/libs/armeabi-v7a/libswscale.so",
+			"toolchain" : "17826001263893922363"
 		}
 	},
 	"toolchains" : 
