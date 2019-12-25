@@ -2,16 +2,17 @@ package com.example.fftest;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
+import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 
 public class XPlay extends GLSurfaceView implements Runnable, SurfaceHolder.Callback {
-    public XPlay(Context context){
-        super(context);
+    public XPlay(Context context, AttributeSet attrs){
+        super(context, attrs);
     }
 
     @Override
     public void run(){
-
+        Open2("/storage/emulated/0/test.mp4", getHolder().getSurface());
     }
 
     @Override
@@ -29,5 +30,5 @@ public class XPlay extends GLSurfaceView implements Runnable, SurfaceHolder.Call
 
     }
 
-    public native void Open(String url, Object surface)
+    public native void Open2(String url, Object surface);
 }
