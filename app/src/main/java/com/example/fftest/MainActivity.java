@@ -22,15 +22,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mGLSurfaceView = new myGLSurfaceView(this);
+        setContentView(mGLSurfaceView);
 
-        // Example of a call to a native method
-        TextView tv = findViewById(R.id.sample_text);
-        requestPermission();
-        String path = Environment.getExternalStorageDirectory()+"/test.mp4";
-//        Open(path,this);
-        tv.setText(stringFromJNI());
+
     }
+    private myGLSurfaceView mGLSurfaceView;
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
