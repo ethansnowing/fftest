@@ -1,9 +1,12 @@
 
 {
-	"buildFiles" : [ "/Users/yudehuai/Desktop/TestOpenSL/app/src/main/cpp/CMakeLists.txt" ],
+	"buildFiles" : 
+	[
+		"/Users/yudehuai/Desktop/fftest/TestOpenSL/app/src/main/cpp/CMakeLists.txt"
+	],
 	"cleanCommands" : 
 	[
-		"/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target clean"
+		"/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -12,18 +15,18 @@
 		{
 			"abi" : "x86",
 			"artifactName" : "native-lib",
-			"buildCommand" : "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
+			"buildCommand" : "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/yudehuai/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/yudehuai/Library/Android/sdk/ndk-bundle/platforms/android-23/arch-x86  -Dnative_lib_EXPORTS -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "/Users/yudehuai/Desktop/TestOpenSL/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "/Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86"
+					"flags" : "  --target=i686-none-linux-android --gcc-toolchain=/Users/yudehuai/Library/Android/sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/yudehuai/Library/Android/sdk/ndk-bundle/platforms/android-23/arch-x86  -Dnative_lib_EXPORTS -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -isystem /Users/yudehuai/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security  -std=c++11 -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/yudehuai/Desktop/fftest/TestOpenSL/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Users/yudehuai/Desktop/fftest/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86"
 				}
 			],
-			"output" : "/Users/yudehuai/Desktop/TestOpenSL/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so",
+			"output" : "/Users/yudehuai/Desktop/fftest/TestOpenSL/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so",
 			"toolchain" : "17826001263893922363"
 		}
 	},

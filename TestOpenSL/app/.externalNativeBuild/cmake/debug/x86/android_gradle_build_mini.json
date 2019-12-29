@@ -1,16 +1,16 @@
 {
   "buildFiles": [
-    "/Users/yudehuai/Desktop/TestOpenSL/app/src/main/cpp/CMakeLists.txt"
+    "/Users/yudehuai/Desktop/fftest/TestOpenSL/app/src/main/cpp/CMakeLists.txt"
   ],
   "cleanCommands": [
-    "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target clean"
+    "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target clean"
   ],
   "libraries": {
     "native-lib-Debug-x86": {
       "artifactName": "native-lib",
-      "buildCommand": "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
+      "buildCommand": "/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/yudehuai/Desktop/fftest/TestOpenSL/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
       "abi": "x86",
-      "output": "/Users/yudehuai/Desktop/TestOpenSL/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so"
+      "output": "/Users/yudehuai/Desktop/fftest/TestOpenSL/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so"
     }
   }
 }
