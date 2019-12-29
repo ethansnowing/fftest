@@ -1,7 +1,7 @@
 *.iml
 .gradle
-/local.properties
+fftest/local.properties
 /.idea/workspace.xml
 /.idea
 .DS_Store
-/app/build
+fftest/app/build
