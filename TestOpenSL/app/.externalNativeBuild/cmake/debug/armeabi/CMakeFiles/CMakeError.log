@@ -1,0 +1,11 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp
+
+Run Build Command:"/Users/yudehuai/Library/Android/sdk/cmake/3.6.4111459/bin/ninja" "cmTC_57a6e"
+[1/2] Building C object CMakeFiles/cmTC_57a6e.dir/testCCompiler.c.o
+FAILED: /Users/yudehuai/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang  --target=armv5te-none-linux-androideabi --gcc-toolchain=/Users/yudehuai/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/yudehuai/Library/Android/sdk/ndk-bundle/platforms/android-23/arch-arm   -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security   -fPIE -o CMakeFiles/cmTC_57a6e.dir/testCCompiler.c.o   -c /Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp/testCCompiler.c
+error: error reading '/Users/yudehuai/Desktop/TestOpenSL/app/.externalNativeBuild/cmake/debug/armeabi/CMakeFiles/CMakeTmp/testCCompiler.c'
+1 error generated.
+ninja: build stopped: subcommand failed.
+
+

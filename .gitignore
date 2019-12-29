@@ -5,3 +5,8 @@ fftest/.idea/workspace.xml
 fftest/.idea
 .DS_Store
 fftest/app/build
+
+TestOpenSL/.gradle
+TestOpenSL/.idea
+TestOpenSL/app/build
+TestOpenSL/.idea/workspace.xml
