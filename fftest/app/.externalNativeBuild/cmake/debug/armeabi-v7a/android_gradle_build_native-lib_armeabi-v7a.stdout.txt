@@ -1,17 +1,1 @@
-[1/2] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
-/Users/yudehuai/Desktop/fftest/fftest/app/src/main/cpp/native-lib.cpp:287:5: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
-    delete rgb;
-    ^
-          []
-/Users/yudehuai/Desktop/fftest/fftest/app/src/main/cpp/native-lib.cpp:174:17: note: allocated with 'new[]' here
-    char *rgb = new char[1920*1080*4];
-                ^
-/Users/yudehuai/Desktop/fftest/fftest/app/src/main/cpp/native-lib.cpp:288:5: warning: 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'? [-Wmismatched-new-delete]
-    delete pcm;
-    ^
-          []
-/Users/yudehuai/Desktop/fftest/fftest/app/src/main/cpp/native-lib.cpp:175:17: note: allocated with 'new[]' here
-    char *pcm = new char[48000*4*2];
-                ^
-2 warnings generated.
-[2/2] Linking CXX shared library /Users/yudehuai/Desktop/fftest/fftest/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so
+ninja: no work to do.
