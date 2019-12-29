@@ -10,3 +10,4 @@ TestOpenSL/.gradle
 TestOpenSL/.idea
 TestOpenSL/app/build
 TestOpenSL/.idea/workspace.xml
+TestOpenSL/app/.externalNativeBuild
