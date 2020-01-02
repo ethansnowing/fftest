@@ -11,3 +11,11 @@ TestOpenSL/.idea
 TestOpenSL/app/build
 TestOpenSL/.idea/workspace.xml
 TestOpenSL/app/.externalNativeBuild/*
+
+TestOpenglES/.gradle
+TestOpenglES/.idea/workspace.xml
+TestOpenglES/app/build
+TestOpenglES/.idea
+TestOpenglES/app/.externalNativeBuild
+TestOpenglES/local.properties
+TestOpenglES/.DS_Store
