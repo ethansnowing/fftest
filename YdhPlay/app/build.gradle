@@ -13,6 +13,17 @@ android {
             cmake {
                 cppFlags "-std=c++11"
             }
+            ndk {
+                abiFilters 'armeabi-v7a'
+                stl = "c++_static"
+                ldLibs "log"    //不清楚有没有用到，尝试生成print
+            }
+        }
+        sourceSets{
+            main{
+                //这里是前面用到的libavcodec.so的路径
+                jniLibs.srcDirs=['src/main/cpp/libs']
+            }
         }
     }
     buildTypes {
