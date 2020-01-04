@@ -19,3 +19,11 @@ TestOpenglES/.idea
 TestOpenglES/app/.externalNativeBuild
 TestOpenglES/local.properties
 TestOpenglES/.DS_Store
+
+YdhPlay/.gradle
+YdhPlay/.idea/workspace.xml
+YdhPlay/app/build
+YdhPlay/.idea
+YdhPlay/app/.externalNativeBuild
+YdhPlay/local.properties
+YdhPlay/.DS_Store
