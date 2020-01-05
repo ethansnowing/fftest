@@ -14,11 +14,12 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     //////////////////测试用代码
     IDemux *de = new FFDemux();
     de->Open("/sdcard/test.mp4");
-    for(;;)
+    de->Start();
+    /*for(;;)
     {
         XData d = de->Read();
         LOGI("Read data size is %d",d.size);
-    }
+    }*/
 
     return env->NewStringUTF(hello.c_str());
 }
