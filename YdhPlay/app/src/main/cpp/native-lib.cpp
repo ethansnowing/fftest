@@ -15,6 +15,8 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     IDemux *de = new FFDemux();
     de->Open("/sdcard/test.mp4");
     de->Start();
+    XSleep(3000);
+    de->Stop();
     /*for(;;)
     {
         XData d = de->Read();
