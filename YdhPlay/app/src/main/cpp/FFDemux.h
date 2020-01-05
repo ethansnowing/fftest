@@ -17,6 +17,9 @@ public:
     //获取视频参数
     virtual XParameter GetVPara();
 
+    //获取音频参数
+    virtual XParameter GetAPara();
+
     //读取一帧数据，数据有调用者清理
     virtual XData Read();
 
@@ -24,6 +27,8 @@ public:
 
 private:
     AVFormatContext *ic = 0;
+    int audioStream = 1;
+    int videoStream = 0;
 
 };
 
