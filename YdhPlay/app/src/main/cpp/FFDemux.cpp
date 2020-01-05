@@ -39,8 +39,19 @@ bool FFDemux::Open(const char *url)
 //读取一帧数据，数据有调用者清理
 XData FFDemux::Read()
 {
+    if(!ic) return XData();
     XData d;
-    
+    AVPacket *pkt = av_packet_alloc();
+    int re = av_read_frame(ic, pkt);
+    if(re != 0)
+    {
+        av_packet_free(&pkt);
+        return XData();
+    }
+    LOGI("pack size is %d, pts is %lld", pkt->size, pkt->pts);
+    d.data = (unsigned char *)pkt;
+    d.size = pkt->size;
+
     return d;
 }
 
