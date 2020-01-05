@@ -3,6 +3,7 @@
 
 #include "FFDemux.h"
 #include "XLog.h"
+#include "FFDecode.h"
 
 class TestObs:public IObserver
 {
@@ -25,6 +26,9 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     IDemux *de = new FFDemux();
     de->AddObs(tobs);
     de->Open("/sdcard/test.mp4");
+
+    IDecode *vdecode = new FFDecode();
+    vdecode->Open(de->GetVPara());
     de->Start();
     XSleep(3000);
     de->Stop();

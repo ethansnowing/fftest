@@ -13,7 +13,7 @@ void IDemux::Main() {
         {
             Notify(d);
         }
-        LOGI("IDemux Read data size is %d", d.size);
+//        LOGI("IDemux Read data size is %d", d.size);
 //        if(d.size<=0) break;
     }
 }
