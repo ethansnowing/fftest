@@ -4,6 +4,15 @@
 #include "FFDemux.h"
 #include "XLog.h"
 
+class TestObs:public IObserver
+{
+public:
+    void Update(XData d)
+    {
+        LOGI("TestObs Update data size is %d", d.size);
+    }
+};
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
         JNIEnv *env,
@@ -12,7 +21,9 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
 
 
     //////////////////测试用代码
+    TestObs *tobs = new TestObs();
     IDemux *de = new FFDemux();
+    de->AddObs(tobs);
     de->Open("/sdcard/test.mp4");
     de->Start();
     XSleep(3000);
