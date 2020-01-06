@@ -3,3 +3,18 @@
 //
 
 #include "IDecode.h"
+
+//由主体notify的数据
+void IDecode::Update(XData pkt)
+{
+    if(pkt.isAudio != isAudio)
+    {
+        return;
+    }
+
+}
+
+void IDecode::Main()
+{
+
+}

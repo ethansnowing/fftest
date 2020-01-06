@@ -29,9 +29,12 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
 
     IDecode *vdecode = new FFDecode();
     vdecode->Open(de->GetVPara());
+
+    IDecode *adecode = new FFDecode();
+    vdecode->Open(de->GetAPara());
     de->Start();
-    XSleep(3000);
-    de->Stop();
+//    XSleep(3000);
+//    de->Stop();
     /*for(;;)
     {
         XData d = de->Read();
