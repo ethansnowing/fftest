@@ -47,7 +47,7 @@ GLint InitShader(const char *code, GLint type)
     GLint sh = glCreateShader(type);
     if(sh == 0)
     {
-        LOGE("ydh--glCreateShader %d failed!");
+        LOGE("ydh--glCreateShader %d failed!",sh);
         return 0;
     }
     //加载shader

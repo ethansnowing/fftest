@@ -53,7 +53,7 @@ void IDecode::Main()
                 //获得解码数据
                 XData frame = RecvFrame();
                 if(!frame.data) break;
-                LOGE("RecvFrame %d", frame.size);
+//                LOGE("RecvFrame %d", frame.size);
                 //
                 this->Notify(frame);
             }

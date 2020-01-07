@@ -14,7 +14,7 @@ public class YdhPlay extends GLSurfaceView implements SurfaceHolder.Callback {
     public void surfaceCreated(SurfaceHolder holder)
     {
         //初始化opengl显示
-        InitView(holder);
+        InitView(holder.getSurface());
     }
 
     @Override

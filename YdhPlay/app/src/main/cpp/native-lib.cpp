@@ -5,6 +5,8 @@
 #include "FFDemux.h"
 #include "XLog.h"
 #include "FFDecode.h"
+#include "XEGL.h"
+#include "XShader.h"
 
 class TestObs:public IObserver
 {
@@ -55,5 +57,8 @@ Java_com_yudehuai_ydhplay_YdhPlay_InitView(JNIEnv *env, jobject instance, jobjec
 
     // TODO
     ANativeWindow *win = ANativeWindow_fromSurface(env,surface);
+    XEGL::Get()->Init(win);
+    XShader shader;
+    shader.Init();
 
 }
