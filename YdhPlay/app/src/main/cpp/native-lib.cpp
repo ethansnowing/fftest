@@ -24,15 +24,20 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     //////////////////测试用代码
     TestObs *tobs = new TestObs();
     IDemux *de = new FFDemux();
-    de->AddObs(tobs);
+//    de->AddObs(tobs);
     de->Open("/sdcard/test.mp4");
 
     IDecode *vdecode = new FFDecode();
     vdecode->Open(de->GetVPara());
 
     IDecode *adecode = new FFDecode();
-    vdecode->Open(de->GetAPara());
+    adecode->Open(de->GetAPara());
+    de->AddObs(vdecode);
+    de->AddObs(adecode);
+
     de->Start();
+    vdecode->Start();
+    adecode->Start();
 //    XSleep(3000);
 //    de->Stop();
     /*for(;;)
