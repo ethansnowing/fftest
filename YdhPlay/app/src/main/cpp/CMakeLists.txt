@@ -46,6 +46,11 @@ add_library( # Sets the name of the library.
         IDecode.cpp
         FFDecode.cpp
         XParameter.cpp
+        IVideoView.cpp
+        GLVideoView.cpp
+        XTexture.cpp
+        XShader.cpp
+        XEGL.cpp
 
         )
 
