@@ -7,7 +7,7 @@
 
 
 #include "XData.h"
-class XTexture
+class XTexture;
 
 class GLVideoView {
 public:
