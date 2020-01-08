@@ -11,7 +11,8 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags "-std=c++11"
+                cppFlags.add("-std=c++11")
+                cppFlags.add("-Werror")
             }
             ndk {
                 abiFilters 'armeabi-v7a'

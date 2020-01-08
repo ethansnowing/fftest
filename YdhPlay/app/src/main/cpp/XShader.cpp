@@ -138,5 +138,6 @@ bool XShader::Init()
     glUniform1i( glGetUniformLocation(program, "vTexture"), 2);     //对于纹理第3层
 
     LOGI("初始化Shader成功！");
+    return true;
 
 }
