@@ -9,6 +9,8 @@
 #include "XShader.h"
 #include "IVideoView.h"
 #include "GLVideoView.h"
+#include "IResample.h"
+#include "FFResample.h"
 
 class TestObs:public IObserver
 {
@@ -42,8 +44,14 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     de->AddObs(vdecode);
     de->AddObs(adecode);
 
+    //渲染
     view = new GLVideoView();
     vdecode->AddObs(view);
+
+    //音频重采样
+    IResample *resample = new FFResample();
+    resample->Open(de->GetAPara());
+    adecode->AddObs(resample);
 
     de->Start();
     vdecode->Start();
