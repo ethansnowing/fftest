@@ -51,6 +51,8 @@ add_library( # Sets the name of the library.
         XTexture.cpp
         XShader.cpp
         XEGL.cpp
+        IResample.cpp
+        FFResample.cpp
 
         )
 
