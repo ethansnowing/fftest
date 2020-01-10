@@ -18,6 +18,7 @@ bool XData::Alloc(int size, const char *d)
     {
         memcpy(this->data, d, size);
     }
+    this->size = size;
     return true;
 }
 
