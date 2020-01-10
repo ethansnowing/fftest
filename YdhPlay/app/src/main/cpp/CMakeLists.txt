@@ -53,6 +53,8 @@ add_library( # Sets the name of the library.
         XEGL.cpp
         IResample.cpp
         FFResample.cpp
+        IAudioPlay.cpp
+        SLAudioPlay
 
         )
 
