@@ -12,7 +12,19 @@ static SLEngineItf eng = NULL;
 static SLObjectItf mix = NULL;
 static SLObjectItf player = NULL;
 static SLPlayItf iplayer = NULL;
-SLAndroidSimpleBufferQueueItf pcmQue = NULL;   //缓冲队列
+static SLAndroidSimpleBufferQueueItf pcmQue = NULL;   //缓冲队列
+
+SLAudioPlay::SLAudioPlay()
+{
+    buf = new unsigned char[1024*1024];
+}
+
+SLAudioPlay::~SLAudioPlay()
+{
+    delete buf;
+    buf = 0;
+}
+
 
 SLEngineItf CreateSL(){
     SLresult re;
@@ -30,7 +42,18 @@ void SLAudioPlay::PlayCall(void *bufq)
 {
     if(!bufq) return;
     SLAndroidSimpleBufferQueueItf bf = (SLAndroidSimpleBufferQueueItf)bufq;
-    LOGE("LAudioPlay::PlayCall");
+//    LOGI("SLAudioPlay::PlayCall success!");
+    //阻塞
+    XData d = GetData();
+    if(d.size <= 0)
+    {
+        LOGE("GetData() size is 0");
+        return;
+    }
+    if(!buf) return;
+    memcpy(buf, d.data, d.size);
+    (*bf)->Enqueue(bf, buf, d.size);
+    d.Drop();
 
 }
 
@@ -41,7 +64,7 @@ void PcmCall(SLAndroidSimpleBufferQueueItf bf, void *contex)
     {
         LOGE("PcmCall failed, contex is null!");
     }
-    ap->PlayCall((void *)ap);
+    ap->PlayCall((void *)bf);
 }
 
 bool SLAudioPlay::StartPlay(XParameter out)

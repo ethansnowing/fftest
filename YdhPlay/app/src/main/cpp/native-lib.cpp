@@ -36,7 +36,7 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     TestObs *tobs = new TestObs();
     IDemux *de = new FFDemux();
 //    de->AddObs(tobs);
-    de->Open("/sdcard/1024x576.mp4");
+    de->Open("/sdcard/1280x536.mp4");
 
     IDecode *vdecode = new FFDecode();
     vdecode->Open(de->GetVPara());
