@@ -17,12 +17,12 @@ public class YdhPlay extends GLSurfaceView implements SurfaceHolder.Callback, GL
     @Override
     public void surfaceCreated(SurfaceHolder holder)
     {
+        //初始化opengl显示
+        InitView(holder.getSurface());
+        //android 8.0的手机需要做两件事：1，setRenderer(this);2.继承GLSurfaceView.Renderer接口，并实现3个函数
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             setRenderer(this);
         }
-//        new Thread().start();      //使用网上的GLSurfaceView显示方法没有这个开启线程，但是我这里不开启就不行
-        //初始化opengl显示
-        InitView(holder.getSurface());
     }
 
     @Override

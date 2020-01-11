@@ -23,15 +23,12 @@ public:
     }
 };
 
-IVideoView *view;
-
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
-        JNIEnv *env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-
-
+IVideoView *view = NULL;
+extern "C"
+JNIEXPORT
+jint JNI_OnLoad(JavaVM *vm, void *res)
+{
+    FFDecode::InitHard(vm);
     //////////////////测试用代码
     TestObs *tobs = new TestObs();
     IDemux *de = new FFDemux();
@@ -39,7 +36,7 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     de->Open("/sdcard/1280x536.mp4");
 
     IDecode *vdecode = new FFDecode();
-    vdecode->Open(de->GetVPara());
+    vdecode->Open(de->GetVPara(), true);
 
     IDecode *adecode = new FFDecode();
     adecode->Open(de->GetAPara());
@@ -63,6 +60,16 @@ Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
     de->Start();
     vdecode->Start();
     adecode->Start();
+    return JNI_VERSION_1_4;
+}
+
+
+extern "C" JNIEXPORT jstring JNICALL
+Java_com_yudehuai_ydhplay_MainActivity_stringFromJNI(
+        JNIEnv *env,
+        jobject /* this */) {
+    std::string hello = "Hello from C++";
+    //原本运行代码都写在这里，但是因为声音有两遍，所以写到JNI_OnLoad函数
 //    XSleep(3000);
 //    de->Stop();
     /*for(;;)
