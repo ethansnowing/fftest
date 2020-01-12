@@ -108,6 +108,7 @@ XData FFDecode::RecvFrame()
 //    }
     memcpy(d.datas, frame->data,sizeof(d.datas));
 //    LOGI("RecvFrame");
+    d.pts = frame->pts;
     return d;
 
 }

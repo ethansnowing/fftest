@@ -17,8 +17,8 @@ public:
     //获取缓冲数据，如果没有则阻塞
     virtual XData GetData();
     virtual bool StartPlay(XParameter out) = 0;
-    //最大缓冲
-    int maxFrame = 100;
+    int maxFrame = 100;        //最大缓冲
+    int pts = 0;
 
 protected:
     std::list <XData> frames;

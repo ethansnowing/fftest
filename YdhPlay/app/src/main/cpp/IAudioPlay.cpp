@@ -14,14 +14,17 @@ XData IAudioPlay::GetData()
         framesMutex.lock();
         if(!frames.empty())
         {
+            //有数据返回
             d = frames.front();
             frames.pop_front();
+            pts = d.pts;        //将音频的pts传递出去
             framesMutex.unlock();
             return d;
         }
         framesMutex.unlock();
         XSleep(1);
     }
+    //没有拿到音频数据
     return d;
 }
 

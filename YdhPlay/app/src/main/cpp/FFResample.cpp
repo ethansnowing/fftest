@@ -53,6 +53,7 @@ XData FFResample::Resample(XData indata)
         out.Drop();
         return XData();
     }
+    out.pts = indata.pts;       //将从decode获取的pts传递给audioPlay
 //    LOGI("swr_convert success = %d", len);
     return out;
 }
