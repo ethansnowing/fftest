@@ -58,6 +58,7 @@ add_library( # Sets the name of the library.
         IPlayer.cpp
         IPlayerBuilder.cpp
         FFPlayerBuilder.cpp
+        IPlayerPorxy.cpp
 
         )
 
