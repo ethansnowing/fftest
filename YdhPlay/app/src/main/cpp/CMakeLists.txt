@@ -56,6 +56,8 @@ add_library( # Sets the name of the library.
         IAudioPlay.cpp
         SLAudioPlay
         IPlayer.cpp
+        IPlayerBuilder.cpp
+        FFPlayerBuilder.cpp
 
         )
 

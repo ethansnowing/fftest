@@ -2,108 +2,22 @@
 #include <string>
 #include <android/native_window_jni.h>
 
-#include "FFDemux.h"
-#include "XLog.h"
-#include "FFDecode.h"
-#include "XEGL.h"
-#include "XShader.h"
-#include "IVideoView.h"
-#include "GLVideoView.h"
-#include "IResample.h"
-#include "FFResample.h"
-#include "IAudioPlay.h"
-#include "SLAudioPlay.h"
-#include "IPlayer.h"
+#include "FFPlayerBuilder.h"
 
-class TestObs:public IObserver
-{
-public:
-    void Update(XData d)
-    {
-        LOGI("TestObs Update data size is %d", d.size);
-    }
-};
-
-IVideoView *view = NULL;
+static IPlayer *player = NULL;
 extern "C"
 JNIEXPORT
 jint JNI_OnLoad(JavaVM *vm, void *res)
 {
-    /*  //添加IPlayer接口
-    FFDecode::InitHard(vm);
-    //////////////////测试用代码
-    TestObs *tobs = new TestObs();
-    IDemux *de = new FFDemux();
-//    de->AddObs(tobs);
-    de->Open("/sdcard/1280x536.mp4");
-
-    IDecode *vdecode = new FFDecode();
-    vdecode->Open(de->GetVPara(), true);
-
-    IDecode *adecode = new FFDecode();
-    adecode->Open(de->GetAPara());
-    de->AddObs(vdecode);
-    de->AddObs(adecode);
-
-    //渲染
-    view = new GLVideoView();
-    vdecode->AddObs(view);
-
-    //音频重采样
-    IResample *resample = new FFResample();
-    XParameter outPara = de->GetAPara();
-    resample->Open(de->GetAPara(), outPara);
-    adecode->AddObs(resample);
-
-    IAudioPlay *audioPlay = new SLAudioPlay();
-    audioPlay->StartPlay(outPara);
-    resample->AddObs(audioPlay);
-
-    de->Start();
-    vdecode->Start();
-    adecode->Start();
-    return JNI_VERSION_1_4;
-     */
 
     ////////////////////////////只创建这些对象，将Open交给IPlayer->Open()
-    FFDecode::InitHard(vm);
+    FFPlayerBuilder::InitHard(vm);
     //////////////////测试用代码
-    TestObs *tobs = new TestObs();
-    IDemux *de = new FFDemux();
-//    de->Open("/sdcard/1280x536.mp4");
-
-    IDecode *vdecode = new FFDecode();
-//    vdecode->Open(de->GetVPara(), true);
-
-    IDecode *adecode = new FFDecode();
-//    adecode->Open(de->GetAPara());
-    de->AddObs(vdecode);
-    de->AddObs(adecode);
-
-    //渲染
-    view = new GLVideoView();
-    vdecode->AddObs(view);
-
-    //音频重采样
-    IResample *resample = new FFResample();
-//    XParameter outPara = de->GetAPara();
-//    resample->Open(de->GetAPara(), outPara);
-    adecode->AddObs(resample);
-
-    IAudioPlay *audioPlay = new SLAudioPlay();
-//    audioPlay->StartPlay(outPara);
-    resample->AddObs(audioPlay);
-
-    IPlayer::Get()->demux = de;
-    IPlayer::Get()->adecode = adecode;
-    IPlayer::Get()->vdecode = vdecode;
-    IPlayer::Get()->videoView = view;
-    IPlayer::Get()->resample = resample;
-    IPlayer::Get()->audioPlay = audioPlay;
+    player = FFPlayerBuilder::Get()->BuilderPlayer();
 
 
-    IPlayer::Get()->Open("/sdcard/1280x536.mp4");
-    IPlayer::Get()->Start();
+    player->Open("/sdcard/1280x536.mp4");
+    player->Start();
 
 //    de->Start();
 //    vdecode->Start();
@@ -135,7 +49,10 @@ Java_com_yudehuai_ydhplay_YdhPlay_InitView(JNIEnv *env, jobject instance, jobjec
     // TODO
     ANativeWindow *win = ANativeWindow_fromSurface(env,surface);
 //    将下面这些启动播放器的代码交给IPlayer->Start()
-    IPlayer::Get()->InitView(win);
+    if(player)
+    {
+        player->InitView(win);
+    }
 //    view->SetRender(win);
 //    XEGL::Get()->Init(win);
 //    XShader shader;
