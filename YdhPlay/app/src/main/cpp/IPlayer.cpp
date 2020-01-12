@@ -21,10 +21,18 @@ void IPlayer::Main()
     while(!isExit)
     {
         mux.lock();
+        if(!audioPlay || !vdecode)
+        {
+            mux.unlock();
+            XSleep(2);
+            continue;
+        }
+
         //同步
         //获取音频的pts,告诉视频
         int apts = audioPlay->pts;
-        LOGE("apts = %d",apts);
+//        LOGE("apts = %d",apts);
+        vdecode->synPts = apts;     //将音频pts传递给vdecode
 
         mux.unlock();
         XSleep(2);

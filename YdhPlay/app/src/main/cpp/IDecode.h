@@ -30,6 +30,10 @@ public:
     //最大的队列缓冲
     int maxList = 100;
 
+    //同步时间，再次打开文件要清零
+    int synPts = 0;
+    int pts = 0;     //没解码一次将pts保存下来，用于判断当前视频pts是否大于从IAudioPlayer.cpp获取到的音频pts
+
 protected:
     virtual void Main();
     //读取缓冲
