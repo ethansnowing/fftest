@@ -7,6 +7,8 @@
 
 
 #include "XThread.h"
+#include "XParameter.h"
+
 class IDemux;
 class IDecode;
 class IResample;
@@ -18,7 +20,9 @@ public:
     static IPlayer *Get(unsigned char index=0);
     virtual bool Open(const char *path);
     virtual bool Start();
-    bool isHardDecode = true;
+    virtual void InitView(void *win);
+    bool isHardDecode = true;   //由外部用户控制，是否启用硬解码
+    XParameter outPara;     //由外部用户控制，是否传入音频播放参数
 
     IDemux *demux = 0;
     IDecode *vdecode = 0;

@@ -29,7 +29,7 @@ extern "C"
 JNIEXPORT
 jint JNI_OnLoad(JavaVM *vm, void *res)
 {
-    /*  //添加IPlayer接口，将代码重写
+    /*  //添加IPlayer接口
     FFDecode::InitHard(vm);
     //////////////////测试用代码
     TestObs *tobs = new TestObs();
@@ -65,6 +65,7 @@ jint JNI_OnLoad(JavaVM *vm, void *res)
     return JNI_VERSION_1_4;
      */
 
+    ////////////////////////////只创建这些对象，将Open交给IPlayer->Open()
     FFDecode::InitHard(vm);
     //////////////////测试用代码
     TestObs *tobs = new TestObs();
@@ -102,6 +103,7 @@ jint JNI_OnLoad(JavaVM *vm, void *res)
 
 
     IPlayer::Get()->Open("/sdcard/1280x536.mp4");
+    IPlayer::Get()->Start();
 
 //    de->Start();
 //    vdecode->Start();
@@ -132,7 +134,9 @@ Java_com_yudehuai_ydhplay_YdhPlay_InitView(JNIEnv *env, jobject instance, jobjec
 
     // TODO
     ANativeWindow *win = ANativeWindow_fromSurface(env,surface);
-    view->SetRender(win);
+//    将下面这些启动播放器的代码交给IPlayer->Start()
+    IPlayer::Get()->InitView(win);
+//    view->SetRender(win);
 //    XEGL::Get()->Init(win);
 //    XShader shader;
 //    shader.Init();
