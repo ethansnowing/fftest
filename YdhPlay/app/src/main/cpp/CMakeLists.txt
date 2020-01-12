@@ -55,6 +55,7 @@ add_library( # Sets the name of the library.
         FFResample.cpp
         IAudioPlay.cpp
         SLAudioPlay
+        IPlayer.cpp
 
         )
 
