@@ -84,7 +84,7 @@ static GLuint InitShader(const char *code, GLint type)
     GLuint sh = glCreateShader(type);
     if(sh == 0)
     {
-        LOGE("ydh--glCreateShader %d failed!",sh);
+        LOGE("ydh--glCreateShader %d failed!",type);
         return 0;
     }
     //加载shader
@@ -115,8 +115,9 @@ bool XShader::Init(XShaderType type)
     if(vsh == 0)
     {
         LOGE("InitShader GL_VERTEX_SHADER failed!");
+        return false;
     }
-    LOGI("InitShader GL_VERTEX_SHADER success!");
+    LOGI("InitShader GL_VERTEX_SHADER success! %d", type);
     //片元yuv420 shader初始化
     switch (type)
     {
@@ -134,11 +135,13 @@ bool XShader::Init(XShaderType type)
             break;
         default:
             LOGE("XSHADER format is error");
+            return false;
     }
 
     if(fsh == 0)
     {
         LOGE("InitShader GL_FRAGMENT_SHADER failed!");
+        return false;
     }
     LOGI("InitShader GL_FRAGMENT_SHADER success!");
 

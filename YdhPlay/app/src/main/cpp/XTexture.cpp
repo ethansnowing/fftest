@@ -20,7 +20,7 @@ public:
         if(!win)
         {
             LOGE("XTexture Init failed win is NULL!");
-            return true;
+            return false;
         }
         if(!XEGL::Get()->Init(win)) return false;
         sh.Init((XShaderType)type);

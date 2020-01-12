@@ -38,6 +38,7 @@ public:
         if(EGL_TRUE != eglInitialize(display, 0, 0))
         {
             LOGE("eglInitialize failed!");
+            return false;
         }
         LOGI("eglInitialize success!");
         //3 获取配置并创建surface
