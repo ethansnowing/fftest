@@ -20,6 +20,7 @@ class IPlayer: public XThread {
 public:
     static IPlayer *Get(unsigned char index=0);
     virtual bool Open(const char *path);
+    virtual void Close();
     virtual bool Start();
     virtual void InitView(void *win);
     bool isHardDecode = true;   //由外部用户控制，是否启用硬解码
