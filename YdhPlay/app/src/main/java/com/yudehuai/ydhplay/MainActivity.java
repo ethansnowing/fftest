@@ -13,10 +13,11 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Runnable {
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Button bt;
+    private SeekBar seekbar;
+    private Thread th;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         requestPermission();
 
         bt = findViewById(R.id.open_button);
+        seekbar = findViewById(R.id.aplayseek);
+        seekbar.setMax(1000);
         bt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -48,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //启动播放进度显示线程
+        th = new Thread(this);
+        th.start();
 
 //        // Example of a call to a native method
 //        TextView tv = findViewById(R.id.sample_text);
@@ -73,6 +81,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    //显示播放进度
+    @Override
+    public void run() {
+        for(;;)
+        {
+            seekbar.setProgress((int)(PlayPos()*1000));
+            try {
+                Thread.sleep(40);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public native double PlayPos();
 
 //    /**
 //     * A native method that is implemented by the 'native-lib' native library,

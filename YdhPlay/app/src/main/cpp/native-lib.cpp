@@ -43,4 +43,9 @@ Java_com_yudehuai_ydhplay_OpenUrl_Open(JNIEnv *env, jobject thiz, jstring url_) 
     IPlayerPorxy::Get()->Open(url);
     IPlayerPorxy::Get()->Start();
     env->ReleaseStringUTFChars(url_,url);
+}extern "C"
+JNIEXPORT jdouble JNICALL
+Java_com_yudehuai_ydhplay_MainActivity_PlayPos(JNIEnv *env, jobject thiz) {
+    // TODO: implement PlayPos()
+    return IPlayerPorxy::Get()->PlayPos();
 }
