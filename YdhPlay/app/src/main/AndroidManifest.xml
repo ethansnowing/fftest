@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--各部分活动activity注册-->
+        <activity android:name=".OpenUrl"/>
     </application>
 
 </manifest>

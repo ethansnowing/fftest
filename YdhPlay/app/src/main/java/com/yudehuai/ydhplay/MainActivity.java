@@ -1,14 +1,18 @@
 package com.yudehuai.ydhplay;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
+    private Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +37,21 @@ public class MainActivity extends AppCompatActivity {
         //6.0以上收集获取读取权限
         requestPermission();
 
-        // Example of a call to a native method
-        TextView tv = findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        bt = findViewById(R.id.open_button);
+        bt.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Log.e("XPlay","open button click!");
+                //打开路径选择窗口
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, OpenUrl.class);
+                startActivity(intent);
+            }
+        });
+
+//        // Example of a call to a native method
+//        TextView tv = findViewById(R.id.sample_text);
+//        tv.setText(stringFromJNI());
     }
 
     public static final int EXTERNAL_STORAGE_REQ_CODE = 10 ;
@@ -57,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
+//    /**
+//     * A native method that is implemented by the 'native-lib' native library,
+//     * which is packaged with this application.
+//     */
+//    public native String stringFromJNI();
 }

@@ -1,0 +1,24 @@
+# ninja log v5
+3	122	0	CMakeFiles/native-lib.dir/XParameter.cpp.o	a6f64b0b1f0660
+2	186	0	CMakeFiles/native-lib.dir/XData.cpp.o	7728d30acf15620f
+2	385	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	4ef830aaf042d20d
+2	397	0	CMakeFiles/native-lib.dir/IDemux.cpp.o	3c4683438a6a8aaa
+4	399	0	CMakeFiles/native-lib.dir/IVideoView.cpp.o	7b49d1cdbb3656ac
+3	442	0	CMakeFiles/native-lib.dir/IObserver.cpp.o	f0280b1b2e81c2c4
+186	445	0	CMakeFiles/native-lib.dir/XTexture.cpp.o	f3c52d868d1f8e8e
+3	451	0	CMakeFiles/native-lib.dir/IDecode.cpp.o	6eee9116548be5dc
+123	462	0	CMakeFiles/native-lib.dir/GLVideoView.cpp.o	549b37426c9605e6
+2	543	0	CMakeFiles/native-lib.dir/FFDemux.cpp.o	660c11aeb6b15cf
+3	599	0	CMakeFiles/native-lib.dir/FFDecode.cpp.o	164724d3f6c4730
+3	693	0	CMakeFiles/native-lib.dir/XThread.cpp.o	9b79e5570243a851
+398	714	0	CMakeFiles/native-lib.dir/XEGL.cpp.o	31029e8541cf9537
+386	718	0	CMakeFiles/native-lib.dir/XShader.cpp.o	78fbcdcd5c6c76a7
+399	741	0	CMakeFiles/native-lib.dir/IResample.cpp.o	56e7e87485c82ba9
+442	812	0	CMakeFiles/native-lib.dir/FFResample.cpp.o	7efa0e418074dfd5
+462	814	0	CMakeFiles/native-lib.dir/IPlayer.cpp.o	349093aefe27a2f5
+445	815	0	CMakeFiles/native-lib.dir/IAudioPlay.cpp.o	c24cbff407c42098
+543	836	0	CMakeFiles/native-lib.dir/IPlayerBuilder.cpp.o	5465a21f732ce7cf
+451	850	0	CMakeFiles/native-lib.dir/SLAudioPlay.cpp.o	9097e16d5ceaeafb
+599	887	0	CMakeFiles/native-lib.dir/FFPlayerBuilder.cpp.o	87772fb68b005434
+693	895	0	CMakeFiles/native-lib.dir/IPlayerPorxy.cpp.o	dbe1775d96e30ab
+895	1013	0	/Users/yudehuai/Desktop/fftest/YdhPlay/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	f8c1bdb863f31ade
