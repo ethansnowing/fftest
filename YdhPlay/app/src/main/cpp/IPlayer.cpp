@@ -118,10 +118,7 @@ bool IPlayer::Open(const char *path)
         LOGE("adecode->Open %s failed!", path);
 //        return false;
     }
-    if(outPara.sample_rate <= 0)
-    {
-        outPara = demux->GetAPara();
-    }
+    outPara = demux->GetAPara();
     //重采样，有可能不需要，解码后或者解封装后可能就是原始播放数据
     if(!resample || !resample->Open(demux->GetAPara(),outPara))
     {

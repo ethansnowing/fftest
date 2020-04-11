@@ -30,6 +30,19 @@ public class OpenUrl extends AppCompatActivity {
                     }
                 }
         );
+        //打开在线链接
+        btrtmp = findViewById(R.id.playrtmp);
+        btrtmp.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        EditText t = findViewById(R.id.rtmpurl);
+                        Open(t.getText().toString());
+                        //关闭当前窗口
+                        finish();
+                    }
+                }
+        );
 
     }
 
