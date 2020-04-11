@@ -42,10 +42,16 @@ Java_com_yudehuai_ydhplay_OpenUrl_Open(JNIEnv *env, jobject thiz, jstring url_) 
     const char *url = env->GetStringUTFChars(url_,0);
     IPlayerPorxy::Get()->Open(url);
     IPlayerPorxy::Get()->Start();
+//    IPlayerPorxy::Get()->Seek(0.5);
     env->ReleaseStringUTFChars(url_,url);
 }extern "C"
 JNIEXPORT jdouble JNICALL
 Java_com_yudehuai_ydhplay_MainActivity_PlayPos(JNIEnv *env, jobject thiz) {
     // TODO: implement PlayPos()
     return IPlayerPorxy::Get()->PlayPos();
+}extern "C"
+JNIEXPORT jboolean JNICALL
+Java_com_yudehuai_ydhplay_MainActivity_Seek(JNIEnv *env, jobject thiz, jdouble pos) {
+    // TODO: implement Seek()
+    return IPlayerPorxy::Get()->Seek(pos);
 }

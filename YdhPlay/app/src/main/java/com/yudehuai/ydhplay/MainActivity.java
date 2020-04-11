@@ -17,7 +17,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements Runnable {
+public class MainActivity extends AppCompatActivity implements Runnable,SeekBar.OnSeekBarChangeListener {
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         bt = findViewById(R.id.open_button);
         seekbar = findViewById(R.id.aplayseek);
         seekbar.setMax(1000);
+        seekbar.setOnSeekBarChangeListener(this);
+
         bt.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -97,6 +99,22 @@ public class MainActivity extends AppCompatActivity implements Runnable {
     }
 
     public native double PlayPos();
+    public native boolean Seek(double pos);
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        Seek((double)seekBar.getProgress()/(double)seekBar.getMax());
+    }
 
 //    /**
 //     * A native method that is implemented by the 'native-lib' native library,

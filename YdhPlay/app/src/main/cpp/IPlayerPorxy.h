@@ -22,6 +22,7 @@ class IPlayerPorxy: public IPlayer
     virtual bool Start();
     virtual void InitView(void *win);
     virtual double PlayPos();       //获取当前的播放进度 0.0-1.0
+    virtual bool Seek(double pos);
 
 protected:
     IPlayerPorxy(){}

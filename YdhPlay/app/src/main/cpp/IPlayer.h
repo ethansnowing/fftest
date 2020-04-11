@@ -24,6 +24,7 @@ public:
     virtual bool Start();
     virtual void InitView(void *win);
     virtual double PlayPos();       //获取当前的播放进度 0.0-1.0
+    virtual bool Seek(double pos);
     bool isHardDecode = true;   //由外部用户控制，是否启用硬解码
     XParameter outPara;     //由外部用户控制，是否传入音频播放参数
 

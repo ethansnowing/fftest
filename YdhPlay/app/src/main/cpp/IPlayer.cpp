@@ -115,6 +115,19 @@ double IPlayer::PlayPos()
     mux.unlock();
     return pos;
 }
+
+bool IPlayer::Seek(double pos)
+{
+    bool re = false;
+    mux.lock();
+    if(demux)
+    {
+        demux->Seek(pos);
+    }
+    mux.unlock();
+    return re;
+}
+
 bool IPlayer::Open(const char *path)
 {
     Close();
