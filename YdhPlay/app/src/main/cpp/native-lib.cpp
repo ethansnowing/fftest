@@ -35,3 +35,12 @@ Java_com_yudehuai_ydhplay_YdhPlay_InitView(JNIEnv *env, jobject instance, jobjec
 //    std::string hello = "Hello from C++";
 //    return env->NewStringUTF(hello.c_str());
 //}
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_yudehuai_ydhplay_OpenUrl_Open(JNIEnv *env, jobject thiz, jstring url_) {
+    // TODO: implement Open()
+    const char *url = env->GetStringUTFChars(url_,0);
+    IPlayerPorxy::Get()->Open(url);
+    IPlayerPorxy::Get()->Start();
+    env->ReleaseStringUTFChars(url_,url);
+}

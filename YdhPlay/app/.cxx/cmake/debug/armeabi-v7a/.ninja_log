@@ -22,3 +22,7 @@
 599	887	0	CMakeFiles/native-lib.dir/FFPlayerBuilder.cpp.o	87772fb68b005434
 693	895	0	CMakeFiles/native-lib.dir/IPlayerPorxy.cpp.o	dbe1775d96e30ab
 895	1013	0	/Users/yudehuai/Desktop/fftest/YdhPlay/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	f8c1bdb863f31ade
+3	399	0	CMakeFiles/native-lib.dir/native-lib.cpp.o	4ef830aaf042d20d
+399	514	0	/Users/yudehuai/Desktop/fftest/YdhPlay/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	f8c1bdb863f31ade
+1	387	0	CMakeFiles/native-lib.dir/IPlayer.cpp.o	349093aefe27a2f5
+387	512	0	/Users/yudehuai/Desktop/fftest/YdhPlay/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	f8c1bdb863f31ade
