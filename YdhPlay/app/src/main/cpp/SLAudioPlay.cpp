@@ -6,6 +6,7 @@
 #include "XLog.h"
 #include <SLES/OpenSLES.h>
 #include <SLES/OpenSLES_Android.h>
+#include <string.h>
 
 static SLObjectItf  engineSL = NULL;        //需要清理的改成全局变量
 static SLEngineItf eng = NULL;
