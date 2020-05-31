@@ -62,7 +62,7 @@ bool FFDemux::Open(const char *url)
         mux.unlock();
         char buf[1024] = {0};
         av_strerror(re, buf, sizeof(buf));
-        LOGE("FFDemux open %s failed!", url);
+        LOGE("FFDemux open %s failed!,re=%d", url,re);
         return false;
     }
     LOGI("FFDemux open %s success!", url);
