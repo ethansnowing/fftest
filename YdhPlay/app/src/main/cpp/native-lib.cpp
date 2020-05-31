@@ -54,4 +54,8 @@ JNIEXPORT jboolean JNICALL
 Java_com_yudehuai_ydhplay_MainActivity_Seek(JNIEnv *env, jobject thiz, jdouble pos) {
     // TODO: implement Seek()
     return IPlayerPorxy::Get()->Seek(pos);
+}extern "C"
+JNIEXPORT void JNICALL
+Java_com_yudehuai_ydhplay_YdhPlay_playOrPause(JNIEnv *env, jobject thiz) {
+    IPlayerPorxy::Get()->SetPause(!IPlayerPorxy::Get()->IsPause());
 }

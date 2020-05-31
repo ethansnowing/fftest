@@ -40,6 +40,28 @@ double IPlayerPorxy::PlayPos()
     return pos;
 }
 
+bool IPlayerPorxy::IsPause()
+{
+    bool re = false;
+    mux.lock();
+    if(player)
+    {
+        re = player->IsPause();
+    }
+    mux.unlock();
+    return re;
+}
+
+void IPlayerPorxy::SetPause(bool isP)
+{
+    mux.lock();
+    if(player)
+    {
+        player->SetPause(isP);
+    }
+    mux.unlock();
+}
+
 bool IPlayerPorxy::Seek(double pos)
 {
     bool re = false;
